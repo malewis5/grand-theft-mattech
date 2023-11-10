@@ -32,7 +32,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundImage: `url('https://grand-theft-mattech.vercel.app/grand-theft-${params.slug}.png')`,
+          backgroundImage: `url('https://${process.env.BASE_URL}/grand-theft-${params.slug}.png')`,
         }}
       >
         <h1
