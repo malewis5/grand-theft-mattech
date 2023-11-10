@@ -1,5 +1,3 @@
-import { get } from 'http';
-import localFont from 'next/font/local';
 import { ImageResponse } from 'next/og';
 
 // Route segment config
@@ -34,7 +32,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundImage: `url('http://localhost:3000/grand-theft-${params.slug}.png')`,
+          backgroundImage: `url('https://grand-theft-mattech.vercel.app/grand-theft-${params.slug}.png')`,
         }}
       >
         <h1
