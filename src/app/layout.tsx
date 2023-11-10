@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Grand Theft MatTech',
+  metadataBase: new URL(`https://${process.env.BASE_URL}`),
 };
 
 export default function RootLayout({
