@@ -49,7 +49,7 @@ export default function Home({ params }: { params: { slug: string } }) {
         <h1
           className={`text-6xl md:text-9xl font-bold text-white ${pricedown.className} text-stroke`}
         >
-          {params.slug.toUpperCase()}
+          {params.slug.split('-').join(' ').toUpperCase()}
         </h1>
         <div className='absolute bottom-0 flex flex-col md:flex-row justify-between w-full'>
           <div className='font-sans text-white flex'>
