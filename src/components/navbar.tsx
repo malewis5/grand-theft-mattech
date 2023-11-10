@@ -14,7 +14,7 @@ export const Navbar = () => {
     <NavigationMenu className='absolute top-3 left-3'>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href='/' legacyBehavior passHref>
+          <Link href='/utah' legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Utah
             </NavigationMenuLink>
