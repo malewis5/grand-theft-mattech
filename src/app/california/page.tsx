@@ -1,5 +1,4 @@
 import Spinner from '@/components/spinner';
-import { Card, CardContent } from '@/components/ui/card';
 import { InfoIcon } from 'lucide-react';
 import localFont from 'next/font/local';
 
@@ -31,11 +30,13 @@ export default function Home() {
               <div className='flex items-center max-w-md'>
                 <InfoIcon className='text-lg mr-2 flex-shrink-0 self-start' />
                 <p className='text-left'>
-                  Gear up for Utah&apos;s epic terrain with essentials: a trusty
-                  camera, hydration for the desert, and solid boots for
-                  exploring. Rent a rugged ride for the unbeaten paths and keep
-                  your map handy—unlike Los Santos, you don’t get a second
-                  chance to witness Utah&apos;s natural masterpieces!
+                  Hit the Pacific Coast Highway with your essentials: a high-def
+                  camera for those scenic shots, enough drinks to keep you cool,
+                  and comfortable kicks for any roadside explorations. Snag a
+                  sleek convertible to cruise the coastline in style. Keep an
+                  eye on the road, and don&apos;t forget to save your game –
+                  those breathtaking Pacific views are a once-in-a-lifetime
+                  loot!
                 </p>
               </div>
             </div>
