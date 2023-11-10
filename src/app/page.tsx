@@ -15,13 +15,13 @@ export default function Home() {
     >
       <div className='container h-full flex flex-col items-center justify-center text-center p-4'>
         <h1
-          className={`text-8xl md:text-9xl font-bold text-white ${pricedown.className} text-stroke`}
+          className={`text-6xl md:text-9xl font-bold text-white ${pricedown.className} text-stroke`}
         >
           MatTech:
         </h1>
 
         <h1
-          className={`text-8xl md:text-9xl font-bold text-white ${pricedown.className} text-stroke`}
+          className={`text-6xl md:text-9xl font-bold text-white ${pricedown.className} text-stroke`}
         >
           UTAH
         </h1>
