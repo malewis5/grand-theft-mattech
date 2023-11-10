@@ -58,7 +58,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
             margin: 0,
           }}
         >
-          {params.slug.toUpperCase()}
+          {params.slug.split('-').join(' ').toUpperCase()}
         </h1>
       </div>
     ),
