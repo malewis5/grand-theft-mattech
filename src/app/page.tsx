@@ -8,7 +8,7 @@ const pricedown = localFont({ src: '/pricedown.otf' });
 export default function Home() {
   return (
     <section
-      className='w-full h-screen bg-cover bg-no-repeat bg-center bg-black relative'
+      className='w-full h-[100svh] bg-cover bg-no-repeat bg-center bg-black relative'
       style={{
         backgroundImage: `url('/grand-theft-utah.png')`,
       }}
