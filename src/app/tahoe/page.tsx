@@ -9,7 +9,7 @@ export default function Home() {
     <section
       className='w-full h-[100svh] bg-cover bg-no-repeat bg-center bg-black relative'
       style={{
-        backgroundImage: `url('/grand-theft-utah.png')`,
+        backgroundImage: `url('/grand-theft-tahoe.png')`,
       }}
     >
       <div className='container h-full flex flex-col items-center justify-center text-center p-4'>
@@ -22,7 +22,7 @@ export default function Home() {
         <h1
           className={`text-6xl md:text-9xl font-bold text-white ${pricedown.className} text-stroke`}
         >
-          UTAH
+          TAHOE
         </h1>
         <div className='absolute bottom-0 flex flex-col md:flex-row justify-between w-full'>
           <div className='font-sans text-white flex'>
@@ -30,11 +30,14 @@ export default function Home() {
               <div className='flex items-center max-w-md'>
                 <InfoIcon className='text-lg mr-2 flex-shrink-0 self-start' />
                 <p className='text-left'>
-                  Gear up for Utah&apos;s epic terrain with essentials: a trusty
-                  camera, hydration for the desert, and solid boots for
-                  exploring. Rent a rugged ride for the unbeaten paths and keep
-                  your map handy—unlike Los Santos, you don’t get a second
-                  chance to witness Utah&apos;s natural masterpieces!
+                  In Tahoe, it’s not just about the ski slopes; it&apos;s about
+                  the après-ski too. After tearing up the powder, swap those
+                  skis for a fireside at a lakeside lodge. Remember, in these
+                  parts, it&apos;s not the altitude that&apos;ll take your
+                  breath away, it&apos;s the views. Keep your camera ready and
+                  your getaway car parked, because you never know when
+                  you&apos;ll need to make a quick escape to the next panoramic
+                  spot.
                 </p>
               </div>
             </div>
