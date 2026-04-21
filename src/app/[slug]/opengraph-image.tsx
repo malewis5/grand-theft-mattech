@@ -1,19 +1,16 @@
-import { ImageResponse } from 'next/og';
-
-// Route segment config
-export const runtime = 'edge';
+import { ImageResponse } from "next/og";
 
 // Image metadata
-export const alt = 'Grand Theft MatTech';
+export const alt = "Grand Theft MatTech";
 export const size = {
   width: 1200,
   height: 630,
 };
 
-export const contentType = 'image/png';
+export const contentType = "image/png";
 
 const getPricedown = async () => {
-  const response = await fetch(new URL('./pricedown.otf', import.meta.url));
+  const response = await fetch(new URL("./pricedown.otf", import.meta.url));
   const pricedown = await response.arrayBuffer();
 
   return pricedown;
@@ -21,47 +18,45 @@ const getPricedown = async () => {
 // Image generation
 export default async function Image({ params }: { params: { slug: string } }) {
   return new ImageResponse(
-    (
-      // ImageResponse JSX element
-      <div
+    // ImageResponse JSX element
+    <div
+      style={{
+        background: "white",
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundImage: `url('https://${process.env.BASE_URL}/grand-theft-${params.slug}.png')`,
+      }}
+    >
+      <h1
         style={{
-          background: 'white',
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundImage: `url('https://${process.env.BASE_URL}/grand-theft-${params.slug}.png')`,
+          fontFamily: "pricedown",
+          fontSize: "4rem",
+          color: "white",
+          margin: 0,
+          textShadow:
+            "-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000",
         }}
       >
-        <h1
-          style={{
-            fontFamily: 'pricedown',
-            fontSize: '4rem',
-            color: 'white',
-            margin: 0,
-            textShadow:
-              '-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000',
-          }}
-        >
-          MatTech:
-        </h1>
+        MatTech:
+      </h1>
 
-        <h1
-          style={{
-            fontFamily: 'pricedown',
-            fontSize: '4rem',
-            color: 'white',
-            textShadow:
-              '-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000',
-            margin: 0,
-          }}
-        >
-          {params.slug.split('-').join(' ').toUpperCase()}
-        </h1>
-      </div>
-    ),
+      <h1
+        style={{
+          fontFamily: "pricedown",
+          fontSize: "4rem",
+          color: "white",
+          textShadow:
+            "-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000",
+          margin: 0,
+        }}
+      >
+        {params.slug.split("-").join(" ").toUpperCase()}
+      </h1>
+    </div>,
     // ImageResponse options
     {
       // For convenience, we can re-use the exported opengraph-image
@@ -69,12 +64,12 @@ export default async function Image({ params }: { params: { slug: string } }) {
       ...size,
       fonts: [
         {
-          name: 'pricedown',
+          name: "pricedown",
           data: await getPricedown(),
-          style: 'normal',
+          style: "normal",
           weight: 400,
         },
       ],
-    }
+    },
   );
 }

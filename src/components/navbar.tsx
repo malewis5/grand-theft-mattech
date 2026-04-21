@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <NavigationMenu className="absolute top-3 left-3">
+    <NavigationMenu className="absolute left-3 top-3 z-20">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
