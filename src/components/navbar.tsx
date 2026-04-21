@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   NavigationMenu,
@@ -6,40 +6,40 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
-import Link from 'next/link';
+} from "@/components/ui/navigation-menu";
+import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <NavigationMenu className='absolute top-3 left-3'>
+    <NavigationMenu className="absolute top-3 left-3">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href='/utah' legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href="/utah">
               Utah
-            </NavigationMenuLink>
-          </Link>
+            </Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href='/california' legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href="/california">
               California
-            </NavigationMenuLink>
-          </Link>
+            </Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href='/tahoe' legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href="/tahoe">
               Tahoe
-            </NavigationMenuLink>
-          </Link>
+            </Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href='/death-valley' legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href="/death-valley">
               Death Valley
-            </NavigationMenuLink>
-          </Link>
+            </Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
